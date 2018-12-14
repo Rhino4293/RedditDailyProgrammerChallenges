@@ -12,10 +12,8 @@ def rollDie(d,sd):
 dieRolls = ["5d12","6d4","1d2","1d8","3d6","4d20","100d100"]
 
 for die in dieRolls:
-    d,n = die.split("d")
-    k = int(d)
-    o = int(n)
-    krolls = rollDie(k,o)
+    d,n = map(int,die.split("d"))
+    krolls = rollDie(d,n)
     print(sum(krolls), krolls)
 
         
